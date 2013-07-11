@@ -1,34 +1,90 @@
 <?php
+// No direct access to this file
+defined('_JEXEC') or die('Restricted access');
+ 
 /**
- * @version 1.5.0 $Id: install.rsbanners.php
- * @package Joomla 1.5.x
- * @subpackage RS-Banners
- * @copyright (C) 2009 RS Web Solutions (http://www.rswebsols.com)
- * @license GNU/GPL
+ * Script file of com_sportsmanagement component
  */
+class com_rsbannersInstallerScript
+{
+	/*
+     * The release value would ideally be extracted from <version> in the manifest file,
+     * but at preflight, the manifest file exists only in the uploaded temp folder.
+     */
+    //private $release = '1.0.00';
+    
+    /**
+	 * method to install the component
+	 *
+	 * @return void
+	 */
+	function install($parent) 
+	{
+		// $parent is the class calling this method
+		$parent->getParent()->setRedirectURL('index.php?option=com_rsbanners');
+	}
+ 
+	/**
+	 * method to uninstall the component
+	 *
+	 * @return void
+	 */
+	function uninstall($parent) 
+	{
+		// $parent is the class calling this method
+		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_UNINSTALL_TEXT') . '</p>';
+	}
+ 
+	/**
+	 * method to update the component
+	 *
+	 * @return void
+	 */
+	function update($parent) 
+	{
+		// $parent is the class calling this method
+		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_UPDATE_TEXT') . $parent->get('manifest')->version . '</p>';
+	}
+ 
+	/**
+	 * method to run before an install/update/uninstall method
+	 *
+	 * @return void
+	 */
+	function preflight($type, $parent) 
+	{
+		// $parent is the class calling this method
+		// $type is the type of change (install, update or discover_install)
+		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_PREFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
+	}
+ 
+	/**
+	 * method to run after an install/update/uninstall method
+	 *
+	 * @return void
+	 */
+	function postflight($type, $parent) 
+	{
+	$mainframe =& JFactory::getApplication();
+    $db = JFactory::getDbo();
+        // $parent is the class calling this method
+		// $type is the type of change (install, update or discover_install)
+		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_POSTFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
 
-defined( '_JEXEC' ) or die( 'Restricted access' );
 
-/**
- * Executes additional installation processes
- *
- * @since 0.1
- */
-function com_install() {
+    
 
-	jimport( 'joomla.filesystem.folder' )
-?>
-
-<center>
-<table cellpadding="4" cellspacing="0" border="0" width="100%" class="adminlist">
-	<tr>
-		<td valign="top">
-       	 	<strong>RS-Banners</strong> <font class="small">by <a href="http://www.rswebsols.com" target="_blank">RS WEB SOLUTIONS</a><br/>
-        	Released under the terms and conditions of the <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU General Public License</a>.</font>		</td>
-	</tr>
-</table>
-
-</center>
-<?php
+   
+    
+        
+	}
+    
+    /*
+    * sets parameter values in the component's row of the extension table
+    */
+    function setParams($param_array) 
+    {
+        
+                
+        }      
 }
-?>

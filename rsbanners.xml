@@ -1,68 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="component" version="1.5.0">
-  <name>RSBanners</name>
-  <creationDate>March 2009</creationDate>
-  <author>RS Web Solutions</author>
-  <copyright>Copyright (c) 2003-2008 RS Web Solutions - Development Team</copyright>
-  <license>This extension is released under the GNU/GPL License</license>
-  <authorEmail>souvik@rswebsols.com</authorEmail>
-  <authorUrl>http://www.rswebsols.com</authorUrl>
-  <version>1.5.0</version>
-  <description>RS-Banners is a Banner Management component to manage and display banner advertisements throughout your site content easily. Please do not forget to download and install the plugin also. Otherwise this will not work.</description>
-  <files>
-  </files>
-
-  <install>
-    <queries>
-      <query>DROP TABLE IF EXISTS `#__rsbanners_ad`</query>
-	  <query>CREATE TABLE IF NOT EXISTS `#__rsbanners_ad` ( `id` int(11) NOT NULL AUTO_INCREMENT, `cid` int(11) NOT NULL DEFAULT '0', `ad_code` text NOT NULL, `status` int(1) NOT NULL DEFAULT '1', PRIMARY KEY (`id`) ) ENGINE=MyISAM</query>
-	  <query>DROP TABLE IF EXISTS `#__rsbanners_adcat`</query>
-	  <query>CREATE TABLE IF NOT EXISTS `#__rsbanners_adcat` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(150) NOT NULL, `code` varchar(50) NOT NULL, `status` int(1) NOT NULL DEFAULT '1', PRIMARY KEY (`id`) ) ENGINE=MyISAM</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(1, 'LeaderBoard-(728 X 90)', '{LEADERBOARD}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(2, 'Banner-(468 X 60)', '{BANNER}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(3, 'HalfBanner-(234 X 60)', '{HALFBANNER}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(4, 'SkyScraper-(120 X 600)', '{SKYSCRAPER}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(5, 'VerticalBanner-(120 X 240)', '{VERTICALBANNER}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(6, 'LargeRectangle-(336 X 280)', '{LARGERECTANGLE}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(7, 'MediumRectangle-(300 X 250)', '{MEDIUMRECTANGLE}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(8, 'Square-(250 X 250)', '{SQUARE}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(9, 'SmallSquare-(200 X 200)', '{SMALLSQUARE}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(10, 'SmallRectangle-(180 X 150)', '{SMALLRECTANGLE}', 1)</query>
-	  <query>INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(11, 'Button-(125 X 125)', '{BUTTON}', 1)</query>
-	</queries>
-  </install>
-
-  <uninstall>
-    <queries>
-	  <query>DROP TABLE IF EXISTS `#__rsbanners_ad`</query>
-	  <query>DROP TABLE IF EXISTS `#__rsbanners_adcat`</query>
-    </queries>
-  </uninstall>
-
-  <installfile>install.rsbanners.php</installfile>
-  <uninstallfile>uninstall.rsbanners.php</uninstallfile>
-
-  <administration>
-    <menu img="components/com_rsbanners/images/rs.gif" link="option=com_rsbanners">RSBanners</menu>
-    <submenu>
-    </submenu>
-    <files>
-      <filename>admin.rsbanners.php</filename>
-	  <filename>admin.rsads.php</filename>
-	  <filename>admin.rsadscategory.php</filename>
-	  <filename>admin.rsdocumentation.php</filename>
-	  <filename>includes/admin.rscompany.php</filename>
-	  <filename>includes/admin.rscompany_h.php</filename>
-	  <filename>includes/admin.rsfooter.php</filename>
-	  <filename>includes/admin.rsfunctions.php</filename>
-	  <filename>includes/admin.rsheader.php</filename>
-	  <filename>includes/admin.rssetting.php</filename>
-      <filename>images/banners.jpg</filename>
-	  <filename>images/adcategory.png</filename>
-	  <filename>images/doc.gif</filename>
-	  <filename>images/rs.gif</filename>
-	  <filename>images/rsbanners.png</filename>
-	  <filename>images/rs-small.jpg</filename>
-    </files>
-  </administration>
-</install>
+<extension type="component" version="2.5.0" method="upgrade">
+ 
+        <name>COM_RSBANNERS</name>
+        
+        <!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>April 2013</creationDate>
+	<author>diddipoeler</author>
+	<authorEmail>diddipoeler@gmx.de</authorEmail>
+	<authorUrl>http://www.fussballineuropa.de</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	
+        <!--  The version string is recorded in the components table -->
+        <version>1.0.00</version>
+        
+        
+        <!-- The description is optional and defaults to the name -->
+        <description>COM_RSBANNERS_DESCRIPTION</description>
+        <!-- Runs on install/uninstall/update; New in 1.6 -->
+	      <scriptfile>install.rsbanners.php</scriptfile>
+        <install> <!-- Runs on install -->
+                <sql>
+                        <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+                </sql>
+        </install>
+        <uninstall> <!-- Runs on uninstall -->
+                <sql>
+                        <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+                </sql>
+        </uninstall>
+        <update> <!-- Runs on update; New in 2.5 -->
+                <schemas>
+                        <schemapath type="mysql">sql/updates</schemapath>
+                </schemas>
+        </update>
+ 
+        <!-- Site Main File Copy Section -->
+        <!-- Note the folder attribute: This attribute describes the folder
+                to copy FROM in the package to install therefore files copied
+                in this section are copied from /site/ in the package -->
+        <files folder="site">
+                
+        </files>
+ 
+        
+ 
+        <administration>
+                <!-- Administration Menu Section -->
+                <menu img="../media/com_rsbanners/images/tux-16x16.png">COM_HELLOWORLD_MENU</menu>
+                <!-- Administration Main File Copy Section -->
+                <!-- Note the folder attribute: This attribute describes the folder
+                        to copy FROM in the package to install therefore files copied
+                        in this section are copied from /admin/ in the package -->
+                <files folder="admin">
+                        <!-- Admin Main File Copy Section -->
+                        <filename>index.html</filename>
+                        <filename>config.xml</filename>
+                        <filename>access.xml</filename>
+                        <!-- SQL files section -->
+                        <folder>assets</folder>
+                        <!-- SQL files section -->
+                        <folder>sql</folder>
+                        <!-- tables files section -->
+                        <folder>tables</folder>
+                        <!-- models files section -->
+                        <folder>models</folder>
+                        <!-- views files section -->
+                        <folder>views</folder>
+                        <!-- controllers files section -->
+                        <folder>controllers</folder>
+                        <!-- helpers files section -->
+                        <folder>helpers</folder>
+                </files>
+ 
+                <languages folder="admin">
+        
+                </languages>
+        </administration>
+ 
+</extension>
