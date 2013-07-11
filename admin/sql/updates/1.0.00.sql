@@ -1,0 +1,11 @@
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(1, 'LeaderBoard-(728 X 90)', '{LEADERBOARD}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(2, 'Banner-(468 X 60)', '{BANNER}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(3, 'HalfBanner-(234 X 60)', '{HALFBANNER}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(4, 'SkyScraper-(120 X 600)', '{SKYSCRAPER}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(5, 'VerticalBanner-(120 X 240)', '{VERTICALBANNER}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(6, 'LargeRectangle-(336 X 280)', '{LARGERECTANGLE}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(7, 'MediumRectangle-(300 X 250)', '{MEDIUMRECTANGLE}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(8, 'Square-(250 X 250)', '{SQUARE}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(9, 'SmallSquare-(200 X 200)', '{SMALLSQUARE}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(10, 'SmallRectangle-(180 X 150)', '{SMALLRECTANGLE}', 1);
+INSERT INTO `#__rsbanners_adcat` (`id`, `name`, `code`, `status`) VALUES(11, 'Button-(125 X 125)', '{BUTTON}', 1);
