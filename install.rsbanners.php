@@ -21,7 +21,7 @@ class com_rsbannersInstallerScript
 	function install($parent) 
 	{
 		// $parent is the class calling this method
-		$parent->getParent()->setRedirectURL('index.php?option=com_rsbanners');
+		//$parent->getParent()->setRedirectURL('index.php?option=com_rsbanners');
 	}
  
 	/**
@@ -32,7 +32,7 @@ class com_rsbannersInstallerScript
 	function uninstall($parent) 
 	{
 		// $parent is the class calling this method
-		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_UNINSTALL_TEXT') . '</p>';
+		echo '<p>' . JText::_('COM_BANNERS_UNINSTALL_TEXT') . '</p>';
 	}
  
 	/**
@@ -43,7 +43,7 @@ class com_rsbannersInstallerScript
 	function update($parent) 
 	{
 		// $parent is the class calling this method
-		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_UPDATE_TEXT') . $parent->get('manifest')->version . '</p>';
+		echo '<p>' . JText::_('COM_BANNERS_UPDATE_TEXT') . $parent->get('manifest')->version . '</p>';
 	}
  
 	/**
@@ -55,7 +55,7 @@ class com_rsbannersInstallerScript
 	{
 		// $parent is the class calling this method
 		// $type is the type of change (install, update or discover_install)
-		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_PREFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
+		echo '<p>' . JText::_('COM_BANNERS_PREFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
 	}
  
 	/**
@@ -69,7 +69,7 @@ class com_rsbannersInstallerScript
     $db = JFactory::getDbo();
         // $parent is the class calling this method
 		// $type is the type of change (install, update or discover_install)
-		echo '<p>' . JText::_('COM_SPORTSMANAGEMENT_POSTFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
+		echo '<p>' . JText::_('COM_BANNERS_POSTFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
 
 
     
