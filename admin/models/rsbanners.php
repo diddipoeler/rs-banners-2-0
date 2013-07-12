@@ -46,7 +46,7 @@ class rsbannersModelrsbanners extends JModelList
         }
 		$query->order(self::_buildContentOrderBy());
  
-		//$mainframe->enqueueMessage(JText::_('seasons query<br><pre>'.print_r($query,true).'</pre>'   ),'');
+		$mainframe->enqueueMessage(JText::_('rsbanners query<br><pre>'.print_r($query,true).'</pre>'   ),'');
         return $query;
 	}
 	
