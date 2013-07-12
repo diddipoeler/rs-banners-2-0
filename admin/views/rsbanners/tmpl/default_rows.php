@@ -38,7 +38,7 @@ JHTML::_('behavior.modal');
 					<th width="10%">
 						<?php
 						echo JHTML::_('grid.sort','JGRID_HEADING_ORDERING','s.ordering',$this->lists['order_Dir'],$this->lists['order']);
-						echo JHTML::_('grid.order',$this->items, 'filesave.png', 'seasons.saveorder');
+						echo JHTML::_('grid.order',$this->items, 'filesave.png', 'rsbanner.saveorder');
 						?>
 					</th>
 					<th width="20">
@@ -53,7 +53,7 @@ JHTML::_('behavior.modal');
 				for ($i=0,$n=count($this->items); $i < $n; $i++)
 				{
 					$row =& $this->items[$i];
-					$link=JRoute::_('index.php?option=com_rsbanners&task=season.edit&id='.$row->id);
+					$link=JRoute::_('index.php?option=com_rsbanners&task=rsbanner.edit&id='.$row->id);
 					$checked=JHTML::_('grid.checkedout',$row,$i);
 					?>
 					<tr class="<?php echo "row$k"; ?>">
@@ -81,13 +81,13 @@ JHTML::_('behavior.modal');
 							<?php
 						}
 						?>
-						<td><?php echo $row->name; ?></td>
+						<td><?php echo $row->ad_code; ?></td>
 						<td class="order">
 							<span>
-								<?php echo $this->pagination->orderUpIcon($i,$i > 0,'season.orderup','JLIB_HTML_MOVE_UP',$ordering); ?>
+								<?php echo $this->pagination->orderUpIcon($i,$i > 0,'rsbanner.orderup','JLIB_HTML_MOVE_UP',$ordering); ?>
 							</span>
 							<span>
-								<?php echo $this->pagination->orderDownIcon($i,$n,$i < $n,'season.orderdown','JLIB_HTML_MOVE_DOWN',$ordering); ?>
+								<?php echo $this->pagination->orderDownIcon($i,$n,$i < $n,'rsbanner.orderdown','JLIB_HTML_MOVE_DOWN',$ordering); ?>
 								<?php $disabled=true ? '' : 'disabled="disabled"'; ?>
 							</span>
 							<input	type="text" name="order[]" size="5" value="<?php echo $row->ordering;?>" <?php echo $disabled ?>
