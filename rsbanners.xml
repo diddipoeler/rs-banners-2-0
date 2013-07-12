@@ -56,7 +56,8 @@
                 <files folder="admin">
                         <!-- Admin Main File Copy Section -->
                         <filename>index.html</filename>
-                        
+                        <filename>controller.php</filename>
+                        <filename>rsbanners.php</filename>
                         <!-- SQL files section -->
                         <folder>assets</folder>
                         <!-- SQL files section -->
