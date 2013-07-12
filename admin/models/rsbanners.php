@@ -82,7 +82,7 @@ class rsbannersModelrsbanners extends JModelList
 		$where=array();
 		if ($search)
 		{
-			$where[]=' LOWER(s.name) LIKE '.$this->_db->Quote('%'.$search.'%');
+			$where[]=' LOWER(s.ad_code) LIKE '.$this->_db->Quote('%'.$search.'%');
 		}
 		$where=(count($where) ? '  '.implode(' AND ',$where) : ' ');
 		return $where;
