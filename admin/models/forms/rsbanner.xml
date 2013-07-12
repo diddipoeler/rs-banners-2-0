@@ -20,7 +20,7 @@
 			label="COM_JOOMLEAGUE_GLOBAL_SPORTSTYPE"
 			description="COM_JOOMLEAGUE_GLOBAL_SPORTSTYPE_DESC"
 			required="true"
-			query="SELECT id AS value, name AS text FROM #__rsbanners_adcat ORDER BY name ASC"
+			query="SELECT id AS value, name AS cid FROM #__rsbanners_adcat ORDER BY name ASC"
 			validate="">
 			<option
 				value="0">
