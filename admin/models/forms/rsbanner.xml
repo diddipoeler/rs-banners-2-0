@@ -21,7 +21,7 @@
 			description="COM_JOOMLEAGUE_GLOBAL_SPORTSTYPE_DESC"
 			required="true"
 			query="SELECT id AS value, name AS name FROM #__rsbanners_adcat ORDER BY name ASC"
-			validate="superiorzero">
+			validate="">
 			<option
 				value="0">
 				COM_JOOMLEAGUE_GLOBAL_SELECT_SPORTSTYPE</option>
