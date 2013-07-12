@@ -57,18 +57,18 @@ class rsbannersViewrsbanner extends JView
 		if ($isNew) 
 		{
 			// For new records, check the create permission.
-			if ($canDo->get('core.create')) 
-			{
+			//if ($canDo->get('core.create')) 
+			//{
 				JToolBarHelper::apply('rsbanner.apply', 'JTOOLBAR_APPLY');
 				JToolBarHelper::save('rsbanner.save', 'JTOOLBAR_SAVE');
 				JToolBarHelper::custom('rsbanner.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
-			}
+			//}
 			JToolBarHelper::cancel('rsbanner.cancel', 'JTOOLBAR_CANCEL');
 		}
 		else
 		{
-			if ($canDo->get('core.edit'))
-			{
+			//if ($canDo->get('core.edit'))
+			//{
 				// We can save the new record
 				JToolBarHelper::apply('rsbanner.apply', 'JTOOLBAR_APPLY');
 				JToolBarHelper::save('rsbanner.save', 'JTOOLBAR_SAVE');
@@ -78,11 +78,11 @@ class rsbannersViewrsbanner extends JView
 				{
 					JToolBarHelper::custom('rsbanner.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
 				}
-			}
-			if ($canDo->get('core.create')) 
-			{
+			//}
+			//if ($canDo->get('core.create')) 
+			//{
 				JToolBarHelper::custom('rsbanner.save2copy', 'save-copy.png', 'save-copy_f2.png', 'JTOOLBAR_SAVE_AS_COPY', false);
-			}
+			//}
 			JToolBarHelper::cancel('rsbanner.cancel', 'JTOOLBAR_CLOSE');
 		}
 	}
