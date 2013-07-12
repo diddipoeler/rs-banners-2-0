@@ -8,7 +8,7 @@ jimport('joomla.application.component.view');
 /**
  * HelloWorlds View
  */
-class rsbannerViewrsbanners extends JViewLegacy
+class rsbannersViewrsbanners extends JViewLegacy
 {
         protected $items;
         protected $pagination;
