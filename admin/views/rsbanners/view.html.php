@@ -20,6 +20,9 @@ class rsbannersViewrsbanners extends JViewLegacy
          */
         function display($tpl = null) 
         {
+                $option = JRequest::getCmd('option');
+		$mainframe = JFactory::getApplication();
+		$uri = JFactory::getURI();
                 // Get data from the model
                 $this->items = $this->get('Items');
                 $this->pagination = $this->get('Pagination');
@@ -34,6 +37,8 @@ class rsbannersViewrsbanners extends JViewLegacy
                         return false;
                 }
  
+                $this->assignRef('user',JFactory::getUser());
+                $this->assignRef('request_url',$uri->toString());
                 // Set the toolbar
                 $this->addToolBar();
  
