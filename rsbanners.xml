@@ -74,7 +74,8 @@
                 </files>
  
                 <languages folder="admin">
-        
+                <language tag="en-GB">language/en-GB/en-GB.com_rsbanners.ini</language>
+                <language tag="en-GB">language/en-GB/en-GB.com_rsbanners.sys.ini</language>
                 </languages>
         </administration>
  
