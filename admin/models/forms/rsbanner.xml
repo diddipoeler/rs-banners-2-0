@@ -8,6 +8,7 @@
 		<field
 			name="ad_code"
 			type="textarea"
+			filter="safehtml"
 			label="COM_SPORTSMANGEMENT_GLOBAL_NAME"
 			description="COM_SPORTSMANGEMENT_GLOBAL_NAME_DESC"
 			class="inputbox"/>
