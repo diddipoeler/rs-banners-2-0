@@ -14,7 +14,7 @@
 		<field
 			name="cid"
 			type="sql"
-			class="inputbox validate-select-required"
+			class="inputbox"
 			default="0"
 			size="1"
 			label="COM_JOOMLEAGUE_GLOBAL_SPORTSTYPE"
