@@ -29,7 +29,7 @@ function save()
     $post = JRequest::getVar('jform', array(), 'post', 'array');
 		
 		// decription must be fetched without striping away html code
-		$post['ad_code'] = JRequest:: getVar('ad_code','none','post','STRING',JREQUEST_ALLOWHTML);
+		//$post['ad_code'] = JRequest:: getVar('ad_code','none','post','STRING',JREQUEST_ALLOWHTML);
 
 		$model = $this->getModel('rsbanner');
         
