@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
  
 // require helper file
-//JLoader::register('HelloWorldHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'helloworld.php');
+JLoader::register('rsbannersHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'rsbanners.php');
  
 // import joomla controller library
 jimport('joomla.application.component.controller');

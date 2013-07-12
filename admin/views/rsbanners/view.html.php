@@ -25,7 +25,7 @@ class rsbannersViewrsbanners extends JViewLegacy
                 $this->pagination = $this->get('Pagination');
  
                 // What Access Permissions does this user have? What can (s)he do?
-                //$this->canDo = HelloWorldHelper::getActions();
+                $this->canDo = rsbannersHelper::getActions();
  
                 // Check for errors
                 if (count($errors = $this->get('Errors'))) 
