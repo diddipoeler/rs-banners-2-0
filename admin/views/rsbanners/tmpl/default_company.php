@@ -11,7 +11,13 @@
 defined('_JEXEC') or die('Restricted access');
 ?>
 <div style="200px;border:1px solid #ccc;background:#fff;margin:0px;padding:5px">
-<div style="margin:5px;"><img src="administrator/components/com_rsbanners/assets/images/rsbanners.png" alt="www.fussballineuropa.de"  /></div>
+<div style="margin:5px;">
+<?PHP
+JHTML::image(JURI::root().'administrator/components/com_rsbanners/assets/images/rsbanners.png',"www.fussballineuropa.de",array('title'=> "www.fussballineuropa.de"))
+?>
+
+
+</div>
 
 <h3>Version : 1.0.00 for Joomla 2.5</h3>
 <h3>Developed By : diddipoeler</h3>
