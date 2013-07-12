@@ -40,8 +40,9 @@
         <!-- Note the folder attribute: This attribute describes the folder
                 to copy FROM in the package to install therefore files copied
                 in this section are copied from /site/ in the package -->
-        <files folder="site/modules">
-        <folder>mod_rsbanners</folder>       
+        <files folder="site">
+        <folder>modules</folder>       
+        <folder>plugins</folder>
         </files>
  
  <files folder="modules">
