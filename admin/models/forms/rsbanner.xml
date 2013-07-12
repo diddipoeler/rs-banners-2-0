@@ -7,11 +7,11 @@
 		/>
 		<field
 			name="ad_code"
-			type="textarea"
+			type="editor"
 			filter="safehtml"
 			label="COM_SPORTSMANGEMENT_GLOBAL_NAME"
 			description="COM_SPORTSMANGEMENT_GLOBAL_NAME_DESC"
-			class="inputbox"/>
+			width="450" />
 		<field
 			name="cid"
 			type="sql"
