@@ -38,32 +38,9 @@ class rsbannersTablersbannersadcat extends JTable
 		parent::__construct( '#__rsbanners_adcat', 'id', $db );
 	}
 
-	/**
-	 * Overloaded check method to ensure data integrity
-	 *
-	 * @access public
-	 * @return boolean True on success
-	 * @since 1.0
-	 */
-	function check()
-	{
 	
-		//should check name unicity
-		return true;
-	}
 	
-	/**
-	 * Overloaded bind function
-	 *
-	 * @param       array           named array
-	 * @return      null|string     null is operation was satisfactory, otherwise returns an error
-	 * @see JTable:bind
-	 * @since 1.5
-	 */
-	function bind($array, $ignore = '')
-	{
-		
-	}
+	
 	
 
 }
