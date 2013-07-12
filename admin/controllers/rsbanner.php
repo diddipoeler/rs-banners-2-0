@@ -13,10 +13,16 @@ class rsbannersControllerrsbanner extends JControllerForm
 
 function save()
 	{
+	   $option = JRequest::getCmd('option');
+		$mainframe = JFactory::getApplication();
+        
   // Check for request forgeries
 		JRequest::checkToken() or die('COM_JOOMLEAGUE_GLOBAL_INVALID_TOKEN');
 
 		$post		= JRequest::get('post');
+        
+        $mainframe->enqueueMessage(JText::_('rsbanners save<br><pre>'.print_r($post,true).'</pre>'),'Notice');
+        
  		$pid		= JRequest::getInt('id');
  		//$post['id'] = $pid; //map cid to table pk: id
     
