@@ -41,11 +41,11 @@
                 to copy FROM in the package to install therefore files copied
                 in this section are copied from /site/ in the package -->
         <files folder="site">
-                
+        <folder>mod_rsbanners</folder>        
         </files>
  
-        
  
+        
         <administration>
                 <!-- Administration Menu Section -->
                 <menu img="../administrator/components/com_rsbanners/assets/images/rs.gif">COM_RSBANNERS_MENU</menu>
