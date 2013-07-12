@@ -17,8 +17,8 @@ defined('_JEXEC') or die('Restricted access');
 		<div class="m">
 			<ul id="submenu">
 				<li><a href="index.php?option=com_rsbanners">Home</a></li>
-				<li><a href="index.php?option=com_rsbanners&task=adscat" <?php if($_REQUEST['task'] == 'adscat') { ?>class="active"<?php } ?>>Category Management</a></li>
-				<li><a href="index.php?option=com_rsbanners&task=ads" <?php if($_REQUEST['task'] == 'ads') { ?>class="active"<?php } ?>>Banner Management</a></li>
+				<li><a href="index.php?option=com_rsbanners&task=rsbanner.adscat" <?php if($_REQUEST['task'] == 'adscat') { ?>class="active"<?php } ?>>Category Management</a></li>
+				<li><a href="index.php?option=com_rsbanners&task=rsbanner.add" <?php if($_REQUEST['task'] == 'add') { ?>class="active"<?php } ?>>Banner Management</a></li>
 				<li><a href="index.php?option=com_rsbanners&task=doc" <?php if($_REQUEST['task'] == 'doc') { ?>class="active"<?php } ?>>Help / Readme / Documentation</a></li>
 			</ul>
 			<div class="clr"></div>
