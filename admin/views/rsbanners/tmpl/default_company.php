@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 <div style="200px;border:1px solid #ccc;background:#fff;margin:0px;padding:5px">
 <div style="margin:5px;">
 <?PHP
-JHTML::image(JURI::root().'administrator/components/com_rsbanners/assets/images/rsbanners.png',"www.fussballineuropa.de",array('title'=> "www.fussballineuropa.de"))
+echo JHTML::image(JURI::root().'administrator/components/com_rsbanners/assets/images/rsbanners.png',"www.fussballineuropa.de",array('title'=> "www.fussballineuropa.de"))
 ?>
 
 
