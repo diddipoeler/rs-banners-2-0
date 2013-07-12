@@ -50,6 +50,10 @@ class rsbannersViewrsbanners extends JViewLegacy
         protected function addToolBar() 
         {
                 JToolBarHelper::title(JText::_('COM_rsbanner_MANAGER_rsbanners'), 'rsbanner');
+                JToolBarHelper::addNew('rsbanner.add', 'JTOOLBAR_NEW');
+                JToolBarHelper::editList('rsbanner.edit', 'JTOOLBAR_EDIT');
+                JToolBarHelper::deleteList('', 'rsbanners.delete', 'JTOOLBAR_DELETE');
+                /*
                 if ($this->canDo->get('core.create')) 
                 {
                         JToolBarHelper::addNew('rsbanner.add', 'JTOOLBAR_NEW');
@@ -67,6 +71,7 @@ class rsbannersViewrsbanners extends JViewLegacy
                         JToolBarHelper::divider();
                         JToolBarHelper::preferences('com_rsbanners');
                 }
+                */
         }
         /**
          * Method to set up the document properties
