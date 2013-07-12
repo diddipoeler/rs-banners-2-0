@@ -6,27 +6,15 @@
 			type="hidden"
 		/>
 		<field
-			name="name"
-			type="text"
+			name="ad_code"
+			type="textarea"
 			label="COM_SPORTSMANGEMENT_GLOBAL_NAME"
 			description="COM_SPORTSMANGEMENT_GLOBAL_NAME_DESC"
-			class="inputbox"
-			required="true"/>
-		<field
-			name="alias"
-			type="text"
-			label="COM_SPORTSMANGEMENT_GLOBAL_ALIAS"
-			description="COM_SPORTSMANGEMENT_GLOBAL_ALIAS_DESC"
-			class="inputbox"/>		
+			class="inputbox"/>
+		
 	</fieldset>		
   
-  <fields name="extended">
-		<fieldset
-			name="extended"
-			label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS"
-		>
-		
-		</fieldset>
+  
 	</fields>	
   		
 </form>
