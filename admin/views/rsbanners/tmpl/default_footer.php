@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @version 1.5.0 $Id: admin.rsfooter.php
  * @package Joomla 1.5.x
@@ -10,5 +11,5 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-echo '<div><br /><br /><hr align="center" width="100%" size="1" noshade="noshade" /></div><div align="center">Developed By <a href="http://www.rswebsols.com" target="_blank">RS Web Solutions</a></div><div><br /></div>';
+echo '<div><br /><br /><hr align="center" width="100%" size="1" noshade="noshade" /></div><div align="center">Developed By <a href="http://www.fussballineuropa.de" target="_blank">diddipoeler</a></div><div><br /></div>';
 ?>

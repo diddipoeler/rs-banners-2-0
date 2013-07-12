@@ -33,7 +33,7 @@ JHTML::_('behavior.modal');
 					</th>
 					<th width="20">&nbsp;</th>
 					<th>
-						<?php echo JHTML::_('grid.sort','COM_SPORTSMANAGEMENT_ADMIN_SEASONS_NAME','s.name',$this->lists['order_Dir'],$this->lists['order']); ?>
+						<?php echo JHTML::_('grid.sort','COM_SPORTSMANAGEMENT_ADMIN_SEASONS_NAME','s.ad_code',$this->lists['order_Dir'],$this->lists['order']); ?>
 					</th>
 					<th width="10%">
 						<?php
