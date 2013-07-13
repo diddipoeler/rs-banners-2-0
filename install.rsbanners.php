@@ -70,7 +70,7 @@ class com_rsbannersInstallerScript
         // $parent is the class calling this method
 		// $type is the type of change (install, update or discover_install)
 		echo '<p>' . JText::_('COM_BANNERS_POSTFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
-        
+        self::installModules();
 	}
     
     /**
