@@ -21,7 +21,7 @@ function save()
 
 		$post		= JRequest::get('post');
         
-        $mainframe->enqueueMessage(JText::_('rsbanners save<br><pre>'.print_r($post,true).'</pre>'),'Notice');
+        //$mainframe->enqueueMessage(JText::_('rsbanners save<br><pre>'.print_r($post,true).'</pre>'),'Notice');
         
  		$pid		= JRequest::getInt('id');
  		//$post['id'] = $pid; //map cid to table pk: id
