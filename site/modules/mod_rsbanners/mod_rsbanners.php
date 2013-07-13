@@ -8,7 +8,7 @@ require_once (dirname(__FILE__).DS.'helper.php');
 
 $document  = & JFactory::getDocument();
 
-
+$banners = modrsbannersHelper::getHello( $params );
 require(JModuleHelper::getLayoutPath('mod_rsbanners'));
 
 ?>

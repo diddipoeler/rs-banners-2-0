@@ -5,9 +5,9 @@
 	<creationDate>March 2009</creationDate>
 	<copyright>Copyright (c) 2003-2008 RS Web Solutions - Development Team</copyright>
 	<license>This extension is released under the GNU/GPL License</license>
-	<authorEmail>souvik@rswebsols.com</authorEmail>
-	<authorUrl>http://www.rswebsols.com</authorUrl>
-	<version>1.5.0</version>
+	<authorEmail>diddipoeler@gmx.de</authorEmail>
+	<authorUrl>http://www.fussballineuropa.de</authorUrl>
+	<version>1.0.00</version>
 	<description>RS-Banners is a Module developed for Joomla! Version 1.5.x and for RS-Banners Component. If you do not have the Component please open http://www.rswebsols.com and download it. This will only work if you are using our RS-Banners Component. Using this module you can able to display banners.</description>	
 	<files>
 		<filename module="mod_rsbanners">mod_rsbanners.php</filename>
@@ -27,8 +27,6 @@
 
 	<fieldset 	name="basic"
 						>
-        	
-
 
 	<field 	name="rsb_adcode" type="text" default="" 
 				label="Category Access Code"
