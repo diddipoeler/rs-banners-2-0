@@ -19,10 +19,16 @@ echo JHTML::image(JURI::root().'administrator/components/com_rsbanners/assets/im
 
 </div>
 
+<div>
 <h3>Version : 1.0.00 for Joomla 2.5</h3>
 <h3>Developed By : diddipoeler</h3>
 <h3>Visit us : <a href="http://www.fussballineuropa.de" target="_blank">www.fussballineuropa.de</a></h3>
 <h3>License : <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPLv2</a></h3>
+</div>
+
+<div>
 <p>If you find our FREE Joomla Extensions are useful, please support the development by making a donation. Thank you.</p>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4107842" target="_blank" title="PayPal - The safer, easier way to pay online."><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" alt="PayPal - The safer, easier way to pay online." border="0"></a></p>
+</div>
+
 </div>
