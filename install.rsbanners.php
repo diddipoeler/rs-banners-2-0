@@ -70,14 +70,29 @@ class com_rsbannersInstallerScript
         // $parent is the class calling this method
 		// $type is the type of change (install, update or discover_install)
 		echo '<p>' . JText::_('COM_BANNERS_POSTFLIGHT_' . $type . '_TEXT' ) . $parent->get('manifest')->version . '</p>';
-
-
-    
-
-   
-    
         
 	}
+    
+    /**
+	 * method to install the modules
+	 *
+	 * @return void
+	 */
+	public function installModules()
+	{
+	$mainframe =& JFactory::getApplication();
+// 	$lang = JFactory::getLanguage(); 
+//   $languages = JLanguageHelper::getLanguages('lang_code');
+  $db =& JFactory::getDBO();
+  
+  $src=JPATH_SITE.DS.'components'.DS.'com_rsbanners'.DS.'modules';
+		$dest=JPATH_SITE.DS.'modules';
+		$modules = JFolder::folders($src);
+        echo 'Copy Site Module(s)';
+		JFolder::copy($src, $dest, '', true);
+        
+  
+  }
     
     /*
     * sets parameter values in the component's row of the extension table
