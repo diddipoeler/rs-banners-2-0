@@ -10,7 +10,7 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 ?>
-<div><?php include_once("components/com_rsbanners/includes/admin.rscompany_h.php"); ?></div>
+
 <div>
 	<div id="submenu-box">
 		<div class="t"><div class="t"><div class="t"></div></div></div>
